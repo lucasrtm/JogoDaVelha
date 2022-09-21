@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    
+</head>
+<body>
+    <main>
+        <h1>JOGO DA VELHA</h1>
+        <div class="content">
+            <section class="scoreboards"> 
+                <div class="scoreboard X">
+                    <div class="scoreboardFigX" style="width: 2px;height:22px;"></div>
+                    <p id="scoreX">-</p>
+                </div>
+                <div class="scoreboard O">
+                    <div class="scoreboardFigO" style="width: 22px; height: 22px;"></div>
+                    <p id="scoreO">-</p>
+                </div>
+            </section>
+            <span class="result" id="result"></span>
+            <section class="gameContent">
+                <div class="square" onclick="clientMark(this,1)"></div>
+                <div class="square" onclick="clientMark(this,2)"></div>
+                <div class="square" onclick="clientMark(this,3)"></div>
+                <div class="square" onclick="clientMark(this,4)"></div>
+                <div class="square" onclick="clientMark(this,5)"></div>
+                <div class="square" onclick="clientMark(this,6)"></div>
+                <div class="square" onclick="clientMark(this,7)"></div>
+                <div class="square" onclick="clientMark(this,8)"></div>
+                <div class="square" onclick="clientMark(this,9)"></div>
+            </section>
+            <button id="restartButton" class="restartButton" onclick="restartGame()"> <img src="./assets/img/reset.png" alt=""></button>
+        </div>
+    </main>
+    <footer>
+        <a target="_blank" href="https://github.com/lucasrtm">made by</a>
+    </footer>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>

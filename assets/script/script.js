@@ -7,14 +7,14 @@ let points = {
    addX(){this.x++},
    addO(){this.o++}
 };
-
+  
 function clientMark(square,field) { //Onclick function which will mark the field chosen by the customer and soon after it will be checked if there was a winner.
       if(square.innerHTML == ''){
          square.innerHTML = '<div class="scoreboardFigX"></div>';
          xPlays.push(field);
          allPlays.push(field);
          }else{
-         window.alert('Escolha outro campo...');
+         squareAlert() //Alert for client.
          return
          };
 
@@ -88,3 +88,21 @@ function restartGame() { //Function that resets the marked fields and makes the 
    result.style.display = 'none';
    restartButton.style.display = 'none';
 }
+function squareAlert() {
+   const divMaster = document.createElement('div');
+   const divIconContent = document.createElement('div');
+   const img = document.createElement('img');
+   const p = document.createElement('p');
+
+   divMaster.className = 'squareAlert'
+   divIconContent.className = 'iconContent'
+   p.innerHTML = 'ALERTA! <br> Escolha outro campo.'
+   img.src = './assets/img/exclamation.png'
+   divMaster.appendChild(divIconContent)
+   divIconContent.appendChild(img)
+   divMaster.appendChild(p)
+   document.getElementsByTagName('main')[0].appendChild(divMaster)
+   setTimeout(()=>{
+      divMaster.remove()
+   },3000)
+} 
